@@ -1,0 +1,80 @@
+/* 
+    Colours
+    primary: #E06666
+    secondary: #333333
+    primary-complement: #26B5AF
+
+    Dimensions and spatiality
+    Desktop width: 1220px
+    General padding: 10px
+*/
+
+/* Base/Foundational */
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a, a:visited {
+    color: #E06666;
+    text-decoration: none;
+}
+a:hover {
+    color: #26B5AF;
+}
+/* End Base/Foundational */
+
+/* Header */
+nav {
+    padding: 10px;
+    height: 85px;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+}
+nav section {
+    display: flex;
+    align-items: center;
+}
+nav section:first-child a {
+    padding: 15px;
+}
+/* End Header */
+
+/* Main Content */
+main {
+    flex: 1 0 auto;
+    max-width: 1220px;
+    margin: auto;
+    padding: 10px;
+}
+/* End Main Content */
+
+/* Footer */
+footer {
+    height: 85px;
+    width: 100%;
+    max-width: 1220px;
+    background-color: #333333;
+    margin: auto;
+    flex-shrink: 0;
+}
+footer section {
+    padding: 10px;
+}
+
+/* Re-organize footer elements from this resolution down */
+@media (max-width: 1024) {
+
+}
+/* End Footer */
+
+/* Helper/Convenience classes */
+
+/* End Helper/Convenience classes */

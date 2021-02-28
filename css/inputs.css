@@ -1,0 +1,23 @@
+/* 
+    Colours
+    primary: #E06666
+    secondary: #333333
+    primary-complement: #26B5AF
+
+    Dimensions and spatiality
+    Desktop width: 1220px
+    General padding: 10px
+*/
+
+/* Buttons */
+
+button {
+    border-radius: 7px;
+    border: none;
+    padding: 10px;
+    background-color: #E06666;
+    color: #FFFFFF;
+    min-width: 124px;
+}
+
+/* End Buttons */
