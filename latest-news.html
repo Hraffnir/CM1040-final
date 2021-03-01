@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/main.css">
@@ -14,13 +13,21 @@
 
 <body>
     <nav>
-        <section>
+        <section class="hidden-mobile">
             <a href="#">Latest News</a>
             <a href="#">Gaming Tech</a>
         </section>
     
-        <section>
+        <section class="hidden-mobile">
             <image alt="Website Logo"></image>
+        </section>
+
+        <section class="hidden-tablet hidden-desktop">
+            <image alt="Website Logo"></image>
+        </section>
+
+        <section class="hidden-tablet hidden-desktop">
+            <button>Menu button</button>
         </section>
     </nav>
 
@@ -64,10 +71,13 @@
     <footer>
         <section>
             <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
     
             <image alt="Footer Logo"></image>
     
+            <a href="#">About Us</a>
+        </section>
+
+        <section>
             <span>Copyright &copy;</span>
         </section>
     </footer>

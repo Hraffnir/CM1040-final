@@ -12,3 +12,6 @@ http://colormind.io/
 # Code
 Adapted sticky footer from css-tricks:
 https://css-tricks.com/couple-takes-sticky-footer/
+
+General tips and guides to flexbox
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
