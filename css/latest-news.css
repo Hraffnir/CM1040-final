@@ -1,0 +1,54 @@
+/* Main Content */
+main {
+    flex: 1 0 auto;
+    max-width: 1220px;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Articles */
+.article-section {
+    margin: 35px 0px;
+    display: flex;
+}
+.article-section img {
+    min-width: 205px;
+    min-height: 180px;
+}
+.article-section .article-summary {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+.article-section .article-summary h3{
+    margin-top: 0;
+}
+/* TODO: Reverse styling of articles on main page */
+
+@media screen and (max-width: 769px) {
+    .article-section img {
+        min-width: 155px;
+        min-height: 130px;
+    }
+    .article-section .article-summary p {
+        text-align: justify;
+    }
+}
+@media screen and (max-width: 512px) {
+    .article-section {
+        flex-direction: column
+    }
+    .article-section img {
+        width: 100%;
+        min-height: 130px;
+    }
+    .article-section .article-summary {
+        margin-left: 0;
+    }
+    .article-section .article-summary h3 {
+        text-align: center;
+    }
+    .article-section .article-summary p {
+        text-align: justify;
+    }
+}
+/* End Articles */

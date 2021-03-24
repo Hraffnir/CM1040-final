@@ -7,79 +7,91 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/inputs.css">
+    <link rel="stylesheet" href="css/latest-news.css">
 
     <title>Latest News</title>
 </head>
 
 <body>
     <nav>
-        <section class="hidden-mobile">
-            <a href="#">Latest News</a>
-            <a href="#">Gaming Tech</a>
-        </section>
+        <section class="nav-content">
+            <div class="hidden-mobile">
+                <a href="#" class="nav-menu-link active">Latest News</a>
+                <a href="gaming-tech.html" class="nav-menu-link">Gaming Tech</a>
+            </div>
+        
+            <div id="logo-container">
+                <a href="latest-news.html">
+                    <image src="assets/images/large_gaming.ly.png" alt="Website Logo"></image>
+                </a>
+            </div>
     
-        <section class="hidden-mobile">
-            <image alt="Website Logo"></image>
-        </section>
-
-        <section class="hidden-tablet hidden-desktop">
-            <image alt="Website Logo"></image>
-        </section>
-
-        <section class="hidden-tablet hidden-desktop">
-            <button>Menu button</button>
+            <div class="hidden-tablet hidden-desktop">
+                <div id="hamburger" onclick="showNav(this)">
+                    <div class="top-burger-bun"></div>
+                    <div class="burger-filling"></div>
+                    <div class="bottom-burger-bun"></div>
+                </div>
+            </div>
         </section>
     </nav>
 
+    <div id="popout-nav-menu" class="active">
+        <a href="#" class="nav-menu-link active">Latest News</a>
+        <a href="gaming-tech.html" class="nav-menu-link">Gaming Tech</a>
+    </div>
+
     <main>
-        <section>
-            <article>
-                <image alt="Article Image"></image>
-                <article>
-                    <header>
-                        <h3>Article Heading</h3>
-                    </header>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </article>
+        <section class="article-section">
+            <image alt="Article Image"></image>
+
+            <article class="article-summary">
+                <header>
+                    <h3>Article Heading</h3>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
             </article>
         </section>
+
+        <div class="separator"></div>
         
-        <section>
-            <article>
-                <article>
-                    <header>
-                        <h3>Article Heading</h3>
-                    </header>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </article>
+        <section class="article-section">
+            <image alt="Article Image"></image>
 
-                <image alt="Article Image"></image>
+            <article class="article-summary">
+                <header>
+                    <h3>Article Heading</h3>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
             </article>
         </section>
 
-        <section>
+        <section class="paging-buttons">
             <button type="button">Previous Page</button>
 
             <button type="button">Next Page</button>
         </section>
     </main>
 
+    <!-- TODO: Fix responsive layout when < 768 -->
     <footer>
         <section>
-            <a href="#">Contact Us</a>
-    
-            <image alt="Footer Logo"></image>
-    
-            <a href="#">About Us</a>
+            <a class="order-1" href="contact-us.html">Contact Us</a>
+            <a class="order-3" href="about-us.html">About Us</a>
+            <image src="assets/images/large_gaming.ly.png" class="order-2" alt="Footer Logo"></image>
         </section>
 
         <section>
             <span>Copyright &copy;</span>
         </section>
     </footer>
+
+    <script src="js/latest-news.js"></script>
+    <script src="js/gaming-tech.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

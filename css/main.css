@@ -21,6 +21,23 @@ body {
     flex-direction: column;
 }
 
+@font-face {
+    font-family: "SourceSansPro-Light";
+    src: url("/assets/fonts/SourceSansPro-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PublicSans-Light";
+    src: url("/assets/fonts/PublicSans-Light.ttf") format("truetype");
+}
+
+html, body, a, p, span {
+    font-family: "SourceSansPro-Light", 'Times New Roman';
+}
+h1, h2, h3, h4, h5, h6, header {
+    font-family: "PublicSans-Light", 'Times New Roman';
+}
+
 a, a:visited {
     color: #E06666;
     text-decoration: none;
@@ -31,28 +48,85 @@ a:hover {
 /* End Base/Foundational */
 
 /* Header */
+#logo-container {
+    padding-left: 15px;
+}
+#hamburger {
+    display: inline-block;
+    cursor: pointer;
+}
+#hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: #E06666;
+    margin: 7px 0;
+    transition: 0.4s;
+}
+
+/* The following code was taken and modified from w3schools */
+.pickup-burger .top-burger-bun {
+    -webkit-transform: rotate(45deg) translate(-10px, 25px);
+    transform: rotate(45deg) translate(-10px, 25px);
+}
+.pickup-burger .burger-filling {
+    opacity: 0;
+}
+.pickup-burger .bottom-burger-bun {
+    -webkit-transform: rotate(-45deg) translate(10px, -15px);
+    transform: rotate(-45deg) translate(8px, -11px);
+}
+
 nav {
     padding: 10px;
-    height: 85px;
     background-color: #333333;
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    z-index: 10;
 }
-nav section {
+nav .nav-content {
+    background-color: #333333;
+    width: 100%;
+    height: 85px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    font-size: 1.25em;
 }
-nav section:first-child a {
-    padding: 15px;
+nav .nav-content .nav-menu-link {
+    padding: 0 15px;
+}
+#popout-nav-menu {
+    background-color: #333333;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+#popout-nav-menu a {
+    padding: 14px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.25em;
+    font-style: bold;
+}
+
+#popout-nav-menu .nav-menu-link.active, 
+.nav-content .nav-menu-link.active{
+    color: #26B5AF;
 }
 /* End Header */
 
-/* Main Content */
-main {
-    flex: 1 0 auto;
-    max-width: 1220px;
-    margin: auto;
-    padding: 10px;
+.separator {
+    display: block;
+    border-bottom: 1px solid grey;
+    /* TODO: Fancy colour grading here to separate articles */
+}
+
+.paging-buttons {
+    display: flex;
+    justify-content: space-evenly;
 }
 /* End Main Content */
 
@@ -70,15 +144,14 @@ footer {
     footer section:first-child {
         height: 70px;
         display: flex;
-        align-items: center;
         flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: safe;
     }
     footer section a {
         font-size: 1.2em;
-        order: 1;
-    }
-    footer section img {
-        order: 2;
+        padding: 6px;
+        order: none;
     }
     footer section:last-child {
         color: #FFFFFF;
@@ -108,7 +181,22 @@ footer {
 /* End Footer */
 
 /* General */
+.order-1 {
+    order: 1 !important;
+}
+.order-2 {
+    order: 2 !important;
+}
+.order-3 {
+    order: 3 !important;
+}
 /* End General */
+
+/* General helper classes */
+.hidden {
+    display: none;
+}
+/* End General Helper classes */
 
 /* Responsive helper classes */
 @media screen and (max-width: 768px) {

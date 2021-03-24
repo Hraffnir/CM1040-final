@@ -20,4 +20,37 @@ button {
     min-width: 124px;
 }
 
+input,
+textarea {
+    border-radius: 0.25em;
+    padding: 0.75em;
+    border: 1px solid grey;
+}
+input:focus, 
+textarea:focus{
+    outline-color: #b1eeec;
+}
 /* End Buttons */
+
+/* Forms */
+.horizontal-form {
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    gap: 15px;
+}
+.horizontal-form label {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-self: right;
+    align-self: center;
+}
+.horizontal-form input,
+.horizontal-form textarea {
+    grid-column: 2 / 3;
+}
+.horizontal-form button[type="button"] {
+    grid-column: 2 / 3;
+}
+
+/* TODO: Change grid layout for responsive layout */
+/* End Forms */
