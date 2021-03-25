@@ -1,34 +1,40 @@
-/* Main Content */
-main {
-    flex: 1 0 auto;
-    max-width: 1220px;
-    margin: auto;
-    padding: 10px;
-}
-
 /* Articles */
 .article-section {
     margin: 35px 0px;
     display: flex;
+    box-shadow: 0px 0px 5px 3px #efefef;
 }
 .article-section img {
-    min-width: 205px;
-    min-height: 180px;
+    width: auto;
+    height: 180px;
+    align-self: center;
 }
-.article-section .article-summary {
-    flex-grow: 1;
-    margin-left: 15px;
+.article-section .article {
+    display: flex;
+    flex-direction: column
 }
-.article-section .article-summary h3{
-    margin-top: 0;
+.article-section .article-summary,
+.article-section .article header,
+.article-section p {
+    margin: 10px;
 }
-/* TODO: Reverse styling of articles on main page */
+.article-section .article header h3{
+    margin: 0;
+}
+.article-section.flex-reverse .article header,
+.article-section.flex-reverse .article-summary {
+    text-align: right;
+}
+
+.article-section p.read-more {
+    align-self: flex-end;
+}
+.article-section.flex-reverse p.read-more {
+    align-self: flex-start;
+}
 
 @media screen and (max-width: 769px) {
-    .article-section img {
-        min-width: 155px;
-        min-height: 130px;
-    }
+
     .article-section .article-summary p {
         text-align: justify;
     }

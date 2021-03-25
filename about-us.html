@@ -45,15 +45,22 @@
         
     </main>
 
-    <!-- TODO: Fix responsive layout when < 768 -->
     <footer>
-        <section>
-            <a class="order-1" href="contact-us.html">Contact Us</a>
-            <a class="order-3" href="about-us.html">About Us</a>
-            <image src="assets/images/large_gaming.ly.png" class="order-2" alt="Footer Logo"></image>
+        <section class="hidden-mobile">
+            <a href="contact-us.html">Contact Us</a>
+            <image src="assets/images/large_gaming.ly.png" alt="Footer Logo"></image>
+            <a href="about-us.html">About Us</a>
         </section>
 
-        <section>
+        <section class="flex-3 hidden-tablet hidden-desktop">
+            <image src="assets/images/small_gaming.ly.png" alt="Footer Logo"></image>
+            <div class="flex-column">
+                <a class"footer-nav-link" href="contact-us.html">Contact Us</a>
+                <a class"footer-nav-link" href="about-us.html">About Us</a>
+            </div>
+        </section>
+
+        <section class="flex-1">
             <span>Copyright &copy;</span>
         </section>
     </footer>

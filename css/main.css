@@ -41,9 +41,13 @@ h1, h2, h3, h4, h5, h6, header {
 a, a:visited {
     color: #E06666;
     text-decoration: none;
+    font-weight: bold;
 }
 a:hover {
     color: #26B5AF;
+}
+p {
+    font-size: 1.25em;
 }
 /* End Base/Foundational */
 
@@ -112,21 +116,40 @@ nav .nav-content .nav-menu-link {
     font-style: bold;
 }
 
-#popout-nav-menu .nav-menu-link.active, 
-.nav-content .nav-menu-link.active{
+.nav-menu-link.active {
     color: #26B5AF;
 }
 /* End Header */
 
-.separator {
-    display: block;
-    border-bottom: 1px solid grey;
-    /* TODO: Fancy colour grading here to separate articles */
+main {
+    flex: 1 0 auto;
+    max-width: 1220px;
+    margin: auto;
+    padding: 0 10px 10px 10px;
 }
+
+.separator {
+    height: 20px;
+    position: relative;
+    width: 100%;
+    background: radial-gradient(ellipse farthest-side at top center, rgba(0,0,0,0.08), transparent);
+}
+.separator:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(left, transparent, rgba(0,0,0,0.02), rgba(0,0,0,0.02), transparent);
+}
+  
 
 .paging-buttons {
     display: flex;
     justify-content: space-evenly;
+    margin: 35px 0 125px 0;
 }
 /* End Main Content */
 
@@ -178,23 +201,46 @@ footer {
         padding: 0 15px 15px 0;
     }
 }
+@media screen and (max-width: 768px) {
+    footer {
+        display: flex;
+        align-items: center;
+    }
+    footer img {
+        width: auto;
+        height: 32px;
+        align-self: center;
+    }
+    footer a.footer-nav-link{
+        display: flex;
+        flex-direction: column;
+    }
+    footer section:last-child {
+        padding: 0;
+        justify-self: right;
+        flex: 1;
+    }
+    footer section:last-child span{
+        padding: 6px;
+    }
+}
 /* End Footer */
-
-/* General */
-.order-1 {
-    order: 1 !important;
-}
-.order-2 {
-    order: 2 !important;
-}
-.order-3 {
-    order: 3 !important;
-}
-/* End General */
 
 /* General helper classes */
 .hidden {
     display: none;
+}
+.flex-1 { display: flex; flex: 1;}
+.flex-2 { display: flex; flex: 2;}
+.flex-3 { display: flex; flex: 3;}
+.flex-4 { display: flex; flex: 4;}
+.flex-5 { display: flex; flex: 5;}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-reverse {
+    flex-direction: row-reverse;
 }
 /* End General Helper classes */
 

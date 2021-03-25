@@ -1,0 +1,16 @@
+/* Main Content */
+.article-image {
+    width: 100%;
+}
+
+.read-more {
+    text-align: right;
+}
+
+.gaming-article header{
+    text-align: center;
+}
+
+.gaming-article-summary {
+    text-align: justify;
+}

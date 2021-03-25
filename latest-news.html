@@ -41,57 +41,32 @@
         <a href="gaming-tech.html" class="nav-menu-link">Gaming Tech</a>
     </div>
 
-    <main>
-        <section class="article-section">
-            <image alt="Article Image"></image>
-
-            <article class="article-summary">
-                <header>
-                    <h3>Article Heading</h3>
-                </header>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </article>
-        </section>
-
-        <div class="separator"></div>
-        
-        <section class="article-section">
-            <image alt="Article Image"></image>
-
-            <article class="article-summary">
-                <header>
-                    <h3>Article Heading</h3>
-                </header>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </article>
-        </section>
-
-        <section class="paging-buttons">
-            <button type="button">Previous Page</button>
-
-            <button type="button">Next Page</button>
-        </section>
+    <main id="main-content">
     </main>
 
     <!-- TODO: Fix responsive layout when < 768 -->
     <footer>
-        <section>
-            <a class="order-1" href="contact-us.html">Contact Us</a>
-            <a class="order-3" href="about-us.html">About Us</a>
-            <image src="assets/images/large_gaming.ly.png" class="order-2" alt="Footer Logo"></image>
+        <section class="hidden-mobile">
+            <a href="contact-us.html">Contact Us</a>
+            <image src="assets/images/large_gaming.ly.png" alt="Footer Logo"></image>
+            <a href="about-us.html">About Us</a>
         </section>
 
-        <section>
+        <section class="flex-3 hidden-tablet hidden-desktop">
+            <image src="assets/images/small_gaming.ly.png" alt="Footer Logo"></image>
+            <div class="flex-column">
+                <a class"footer-nav-link" href="contact-us.html">Contact Us</a>
+                <a class"footer-nav-link" href="about-us.html">About Us</a>
+            </div>
+        </section>
+
+        <section class="flex-1">
             <span>Copyright &copy;</span>
         </section>
     </footer>
 
-    <script src="js/latest-news.js"></script>
-    <script src="js/gaming-tech.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/article-data.js"></script>
+    <script src="js/latest-news.js"></script>
 </body>
 </html>

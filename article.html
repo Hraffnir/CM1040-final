@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/inputs.css">
-    <link rel="stylesheet" href="css/gaming-tech.css">
+    <link rel="stylesheet" href="css/article.css">
 
     <title>Latest News</title>
 </head>
@@ -17,7 +17,7 @@
         <section class="nav-content">
             <div class="hidden-mobile">
                 <a href="latest-news.html" class="nav-menu-link">Latest News</a>
-                <a href="#" class="nav-menu-link">Gaming Tech</a>
+                <a href="gaming-tech.html" class="nav-menu-link">Gaming Tech</a>
             </div>
         
             <div id="logo-container">
@@ -37,39 +37,35 @@
     </nav>
 
     <div id="popout-nav-menu" class="active">
-        <a href="/latest-news.html" class="nav-menu-link">Latest News</a>
-        <a href="#" class="nav-menu-link">Gaming Tech</a>
+        <a href="latest-news.html" class="nav-menu-link">Latest News</a>
+        <a href="gaming-tech.html" class="nav-menu-link">Gaming Tech</a>
     </div>
 
-    <main>
-        <section class="gaming-article-section">
-            <img class="gaming-article-image" src="assets/images/gaming-article-hero-background.jpg" />
-
-            <article class="gaming-article">
-                <header>
-                    <h3>Article Heading</h3>
-                </header>
-                <p class="gaming-article-summary">
-                    In Castlevania: Lords of Shadow, you follow the adventure of Gabriel Belmont, a holy knight of the Brotherhood of Light, who is guided by the soul of his beloved wife Marie, brutally murdered, and for who he seeks revenge. He is also helped by Zobek, another holy knight who becomes his ally and fights with him against the dark powers of the Lords of Shadow.
-                </p>
-            </article>
-        </section>
+    <main id="main-content">
     </main>
 
-    <!-- TODO: Fix responsive layout when < 768 -->
     <footer>
-        <section>
-            <a class="order-1" href="contact-us.html">Contact Us</a>
-            <a class="order-3" href="about-us.html">About Us</a>
-            <image src="assets/images/large_gaming.ly.png" class="order-2" alt="Footer Logo"></image>
+        <section class="hidden-mobile">
+            <a href="contact-us.html">Contact Us</a>
+            <image src="assets/images/large_gaming.ly.png" alt="Footer Logo"></image>
+            <a href="about-us.html">About Us</a>
         </section>
 
-        <section>
+        <section class="flex-3 hidden-tablet hidden-desktop">
+            <image src="assets/images/small_gaming.ly.png" alt="Footer Logo"></image>
+            <div class="flex-column">
+                <a class"footer-nav-link" href="contact-us.html">Contact Us</a>
+                <a class"footer-nav-link" href="about-us.html">About Us</a>
+            </div>
+        </section>
+
+        <section class="flex-1">
             <span>Copyright &copy;</span>
         </section>
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/gaming-tech.js"></script>
+    <script src="js/article-data.js"></script>
+    <script src="js/article.js"></script>
 </body>
 </html>
