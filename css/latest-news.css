@@ -41,6 +41,9 @@
 }
 
 @media screen and (max-width: 769px) {
+    .article-section .article-summary{
+        padding: 10px;
+    }
     .article-section .article-summary p {
         text-align: justify;
     }
