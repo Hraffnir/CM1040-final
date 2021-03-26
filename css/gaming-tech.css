@@ -38,6 +38,6 @@ main {
         color: white;
     }
     a, a:visited {
-        color: #E06666;
+        color: #E06666 !important;
     }
 }
