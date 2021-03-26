@@ -39,18 +39,13 @@ function getArticlesForPage() {
     var alternator = 1;
     articlesToDisplay.forEach(function(article) {
         var reverseClass = alternator % 2 != 0 ? '' : 'flex-reverse';
-
-        if (alternator > 1) {
-            mainContentArea.innerHTML += `
-                <div class="separator"></div>
-            `;
-        }
         
         alternator++;
 
         mainContentArea.innerHTML += `
             <section class="article-section ${reverseClass}">
-                <img src="${article.bigImage}" />
+                <div class="article-thumbnail" style="background-image: url(${article.bigImage})">
+                </div>
             
                 <article class="article">
                     <header>

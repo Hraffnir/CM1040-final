@@ -1,22 +1,9 @@
 var currentPage = 1;
 var itemsPerPage = 2;
 
-function positionArticleImages() {
-    var height = window.innerHeight;
-    var width = window.innerWidth;
-
-    var images = document.querySelectorAll('.gaming-article-image');
-
-    // images.forEach(image  => {
-    //     image.width = width;
-    // });
-}
-
-window.onresize = positionArticleImages;
-
 function getGamingArticles() {
     return articles.filter(function(article){
-        return article.type === 'gaming';
+        return article.type === 'gaming-tech';
     })
 }
 
@@ -79,6 +66,5 @@ function getArticlesForPage() {
 }
 
 (function() {
-    positionArticleImages();
     getArticlesForPage();
 })();

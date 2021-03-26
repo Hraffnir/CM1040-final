@@ -3,10 +3,6 @@
     primary: #E06666
     secondary: #333333
     primary-complement: #26B5AF
-
-    Dimensions and spatiality
-    Desktop width: 1220px
-    General padding: 10px
 */
 
 /* Base/Foundational */
@@ -127,9 +123,6 @@ nav .nav-content .nav-menu-link {
     html, body, p, span, h1, h2, h3, h4, h5, h6, header {
         color: #AEAEAE;
     }
-    .article-section {
-        box-shadow: 0px 0px 5px 3px #333333 !important;
-    }
   }
 /* End Header */
 
@@ -173,6 +166,7 @@ footer {
     background-color: #333333;
     margin: auto;
     flex-shrink: 0;
+    border-radius: 12px 12px 0 0;
 }
 
 @media screen and (max-width: 769px) {
@@ -257,6 +251,19 @@ footer {
 /* End General Helper classes */
 
 /* Responsive helper classes */
+.visible-mobile-xs {
+    display: none;
+}
+
+@media screen and (max-width: 438px) {
+    .hidden-mobile-xs {
+        display: none !important;
+    }
+    .visible-mobile-xs {
+        display: block !important;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .hidden-mobile {
         display: none !important;

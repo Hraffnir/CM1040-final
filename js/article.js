@@ -17,7 +17,7 @@ function getArticle() {
 
     mainContentArea.innerHTML += `
         <section class="article-section">
-            <img class="article-image" src="${article.bigImage}" />
+            <div class="article-header-image" style="background-image: url(${article.bigImage})"></div>
         
             <article class="article">
                 <header>
@@ -33,11 +33,30 @@ function readBodyContents(bodyContents) {
     var paragraphs = '';
 
     bodyContents.forEach(function(content){
-        paragraphs += `
+        if (typeof(content) === 'object') {
+
+            if(content.video){
+                paragraphs += `
+                <div class="article-video-container">
+                    <video controls>
+                        <source src="${content.video}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            `;
+            } else if (content.asideImage) {
+                paragraphs += `
+                <aside class="article-paragraph-aside-image" style="background-image: url(${content.asideImage})">
+                </aside>
+            `;
+            }
+        } else {
+            paragraphs += `
             <p class="article-paragraph">
                 ${content}
             </p>
         `;
+        }
     })
 
     return paragraphs;
