@@ -3,10 +3,9 @@
     margin: 35px 0px;
     display: flex;
     box-shadow: 0px 0px 23px 14px #efefef;
-    height: 285px;
+    /* height: 285px; */
 }
 .article-section .article-thumbnail {
-    height: 100%;
     flex: 3;
     background-size: cover;
     background-position-x: center;
@@ -73,5 +72,8 @@
     }
     .article * {
         color: white;
+    }
+    a, a:visited {
+        color: #E06666;
     }
 }

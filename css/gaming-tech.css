@@ -37,4 +37,7 @@ main {
     .gaming-article-section * {
         color: white;
     }
+    a, a:visited {
+        color: #E06666;
+    }
 }
