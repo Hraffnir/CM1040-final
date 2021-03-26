@@ -31,13 +31,17 @@
 
 .article-section p.read-more {
     align-self: flex-end;
+    display: flex;
+    flex-grow: 1;
 }
 .article-section.flex-reverse p.read-more {
     align-self: flex-start;
 }
+.article-section p.read-more a {
+    align-self: flex-end;
+}
 
 @media screen and (max-width: 769px) {
-
     .article-section .article-summary p {
         text-align: justify;
     }

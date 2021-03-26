@@ -1,0 +1,13 @@
+#contact-us header,
+#contact-us p,
+#contact-us-sent {
+    text-align: center;
+}
+
+#contact-us #contact-us-form {
+    margin-top: 45px;
+}
+
+#contact-us-sent {
+    color: #3E7213;
+}

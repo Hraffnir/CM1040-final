@@ -112,7 +112,8 @@ nav .nav-content .nav-menu-link {
     font-style: bold;
 }
 
-.nav-menu-link.active {
+.nav-menu-link.active,
+.footer-nav-link.active {
     color: #26B5AF;
 }
 

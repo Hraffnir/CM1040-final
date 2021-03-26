@@ -1,9 +1,16 @@
-/* Main Content */
 main {
     flex: 1 0 auto;
     max-width: 1220px;
     margin: auto;
     padding: 0 10px 10px 10px;
+}
+
+.gaming-article-section {
+    box-shadow: 0px 0px 23px 14px #efefef;
+    margin-bottom: 50px;
+}
+.gaming-article-section .gaming-article {
+    padding: 25px;
 }
 
 .gaming-article-image {
@@ -20,4 +27,14 @@ main {
 
 .gaming-article-summary {
     text-align: justify;
+}
+
+@media (prefers-color-scheme: dark) {
+    .gaming-article-section {
+        box-shadow: 0px 0px 5px 3px #333333 !important;
+        background-color: #7D7D7D;
+    }
+    .gaming-article-section * {
+        color: white;
+    }
 }

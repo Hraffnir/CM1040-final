@@ -8,9 +8,7 @@ function getNewsArticles() {
 }
 
 function nextPage() {
-    var totalPages = Math.ceil(getNewsArticles().length / itemsPerPage);
-
-    if (currentPage == totalPages) {
+    if (currentPage == getTotalPages()) {
         return;
     }
 
@@ -19,13 +17,16 @@ function nextPage() {
 }
 
 function previousPage() { 
-
     if(currentPage == 1) {
         return;
     }
 
     currentPage--;
     getArticlesForPage();
+}
+
+function getTotalPages() {
+    return Math.ceil(getNewsArticles().length / itemsPerPage);
 }
 
 function getArticlesForPage() {
@@ -64,9 +65,9 @@ function getArticlesForPage() {
 
     mainContentArea.innerHTML += `
         <section class="paging-buttons">
-            <button type="button" onclick="previousPage()">Previous Page</button>
+            <button class="${currentPage === 1 ? 'disabled' : ''}" type="button" onclick="previousPage()">Previous Page</button>
 
-            <button type="button" onclick="nextPage()">Next Page</button>
+            <button class="${currentPage === getTotalPages() ? 'disabled' : ''}" type="button" onclick="nextPage()">Next Page</button>
         </section>
     `;
 }
