@@ -51,6 +51,24 @@ textarea:focus{
 .horizontal-form button[type="button"] {
     grid-column: 2 / 3;
 }
-
-/* TODO: Change grid layout for responsive layout */
+@media screen and (max-width: 768px) {
+    .horizontal-form {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* gap: 15px; */
+    }
+    .horizontal-form label {
+        grid-column: 1;
+        display: flex;
+        justify-self: left;
+        align-self: center;
+    }
+    .horizontal-form input,
+    .horizontal-form textarea {
+        grid-column: 1;
+    }
+    .horizontal-form button[type="button"] {
+        grid-column: 1;
+    }
+}
 /* End Forms */
