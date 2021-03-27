@@ -100,7 +100,7 @@ var articles = [{
     id: 7,
     type: 'news',
     title: "Aliens: Fireteam - The First Hands-On – IGN First",
-    bigImage: 'assets/images/aliens-fireteam.jpg', // TODO: Find image
+    bigImage: 'assets/images/aliens-fireteam.jpg',
     summary: `We’ve played the Left 4 Dead-style Aliens shooter, and the Xenomorph body count was...high.`,
     paragraphs: [
         `Aliens: Fireteam developer Cold Iron Studios is nothing if not confident. The recent video game history of the Aliens brand is checkered at best, from 2013’s Aliens: Colonial Marines being just plain bad to 2014’s Alien: Isolation overstaying its welcome and...there’s been nothing since. But the developer had no qualms about jumping straight into their new game with me and letting me play the first mission of the first campaign in three-player co-op.`,

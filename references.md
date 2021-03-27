@@ -8,7 +8,6 @@ https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF
 Color Mind
 http://colormind.io/
 
-
 # Code
 Adapted sticky footer from css-tricks:
 https://css-tricks.com/couple-takes-sticky-footer/

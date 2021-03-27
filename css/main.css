@@ -15,6 +15,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    min-width: 348px;
 }
 
 /* Some custom fonts. */
@@ -104,6 +105,7 @@ nav .nav-content .nav-menu-link {
     top: -10px;
     display: flex;
     flex-direction: column;
+    min-width: 348px;
 }
 #popout-nav-menu a {
     padding: 14px 0;
