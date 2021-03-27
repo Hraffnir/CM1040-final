@@ -17,16 +17,15 @@ body {
     flex-direction: column;
 }
 
+/* Some custom fonts. */
 @font-face {
     font-family: "SourceSansPro-Light";
     src: url("/assets/fonts/SourceSansPro-Light.ttf") format("truetype");
 }
-
 @font-face {
     font-family: "PublicSans-Light";
     src: url("/assets/fonts/PublicSans-Light.ttf") format("truetype");
 }
-
 html, body, a, p, span {
     font-family: "SourceSansPro-Light", 'Times New Roman';
 }
@@ -55,6 +54,8 @@ p {
     display: inline-block;
     cursor: pointer;
 }
+/* Each div is just a line, looks similar to a hamburger
+if you look at it long enough. */
 #hamburger div {
     width: 35px;
     height: 5px;
@@ -117,6 +118,9 @@ nav .nav-content .nav-menu-link {
     color: #26B5AF;
 }
 
+/* What's nice about this is that the colour scheme
+changes automatically based on the OS level "dark mode" setting.
+This was tested on MacOS and Windows. */
 @media (prefers-color-scheme: dark) {
     body, html {
       background: #4b4b4b;
@@ -133,24 +137,6 @@ main {
     margin: auto;
     padding: 0 10px 10px 10px;
 }
-
-.separator {
-    height: 20px;
-    position: relative;
-    width: 100%;
-    background: radial-gradient(ellipse farthest-side at top center, rgba(0,0,0,0.08), transparent);
-}
-.separator:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    left: 0;
-    height: 3px;
-    background: linear-gradient(left, transparent, rgba(0,0,0,0.02), rgba(0,0,0,0.02), transparent);
-}
-  
 
 .paging-buttons {
     display: flex;
@@ -170,45 +156,9 @@ footer {
     border-radius: 12px 12px 0 0;
 }
 
+/* This will add responsiveness for mobile devices (up to 769px) */
 @media screen and (max-width: 769px) {
-    footer section:first-child {
-        height: 70px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: safe;
-    }
-    footer section a {
-        font-size: 1.2em;
-        padding: 6px;
-        order: none;
-    }
-    footer section:last-child {
-        color: #FFFFFF;
-        display: flex;
-        justify-content: flex-end;
-        padding: 0 15px 15px 0;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    footer section:first-child {
-        height: 70px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    footer section a {
-        font-size: 1.2em;
-    }
-    footer section:last-child {
-        color: #FFFFFF;
-        display: flex;
-        justify-content: flex-end;
-        padding: 0 15px 15px 0;
-    }
-}
-@media screen and (max-width: 768px) {
+    
     footer {
         display: flex;
         align-items: center;
@@ -229,6 +179,43 @@ footer {
     }
     footer section:last-child span{
         padding: 6px;
+    }
+    footer section:first-child {
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: safe;
+    }
+    footer section a {
+        font-size: 1.2em;
+        padding: 6px;
+        order: none;
+    }
+    footer section:last-child {
+        color: #FFFFFF;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 15px 15px 0;
+    }
+}
+
+/* This will add responsiveness for tablet/lower res desktop devices (starting from 769px) */
+@media screen and (min-width: 769px) {
+    footer section:first-child {
+        height: 70px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    footer section a {
+        font-size: 1.2em;
+    }
+    footer section:last-child {
+        color: #FFFFFF;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 15px 15px 0;
     }
 }
 /* End Footer */
@@ -256,6 +243,13 @@ footer {
     display: none;
 }
 
+/* The following media query related classes
+are simply helper methods for showing and hiding 
+elements based on resolutions that are: 
+extra-small mobile
+mobile
+tablet
+desktop */
 @media screen and (max-width: 438px) {
     .hidden-mobile-xs {
         display: none !important;

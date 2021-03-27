@@ -27,6 +27,10 @@ textarea:focus{
 }
 
 /* Forms */
+/* We use a grid layout here as it's trivial to layout
+the labels on the left, inputs on the right, and 
+the submit button in the "inputs" column. Furthermore,
+it's trivial to change the layout as seen in the section below. */
 .horizontal-form {
     display: grid;
     grid-template-columns: 125px 1fr;
@@ -45,11 +49,14 @@ textarea:focus{
 .horizontal-form button[type="button"] {
     grid-column: 2 / 3;
 }
+
+/* Here we are changing from a horizontal layout
+to a single column one, to be space conscious when
+viewing this page on a mobile device or much lower resolution. */
 @media screen and (max-width: 768px) {
     .horizontal-form {
         display: grid;
         grid-template-columns: 1fr;
-        /* gap: 15px; */
     }
     .horizontal-form label {
         grid-column: 1;

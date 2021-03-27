@@ -39,7 +39,6 @@
 .article-section p.read-more a {
     align-self: flex-end;
 }
-
 @media screen and (max-width: 769px) {
     .article-section .article-summary{
         padding: 10px;

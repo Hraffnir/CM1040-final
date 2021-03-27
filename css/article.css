@@ -21,6 +21,9 @@
     background-size: cover;
 }
 
+/* When on a smaller device, we unset the float property
+and instead have the image sit in between paragraphs in a single column
+fashion, and allow for the image to take up 100% of the width, for responsiveness. */
 @media screen and (max-width: 769px) {
     .article-section .article .article-paragraph-aside-image {
         float: unset;

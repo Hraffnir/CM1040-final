@@ -40,4 +40,8 @@ main {
     a, a:visited {
         color: #E06666 !important;
     }
+    nav-menu-link .active,
+    nav-menu-link .active:visited {
+        color: #26B5AF !important;
+    }
 }

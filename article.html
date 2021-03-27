@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Relevant stylesheets for this page. -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/inputs.css">
     <link rel="stylesheet" href="css/article.css">
@@ -13,58 +14,80 @@
 </head>
 
 <body>
+    <!-- Wrapper for our navigation bar. -->
     <nav>
         <section class="nav-content">
+
+            <!-- We hide these nav links when viewing the website with desktop/tablet resolutions -->
             <div class="hidden-mobile">
                 <a href="index.html" class="nav-menu-link">Latest News</a>
                 <a href="gaming-tech.html" class="nav-menu-link">Gaming Tech</a>
             </div>
         
+            <!-- Container for the website logos. -->
             <div id="logo-container">
                 <a href="index.html">
+                    <!-- The larger variant will only display on larger mobile devices or greater resolutions. -->
                     <image class="hidden-mobile-xs" src="assets/images/large_gaming.ly.png" alt="Website Logo"></image>
+                    <!-- The smaller variant is for much tinier resolutions, to give the nav dropdown button space. -->
                     <image class="visible-mobile-xs" src="assets/images/small_gaming.ly.png" alt="Website Logo"></image>
                 </a>
             </div>
     
+            <!-- Container for the nav dropdown button. -->
             <div class="hidden-tablet hidden-desktop">
+                <!-- Called the hamburger as it reminds me of a.. hamburger! -->
                 <div id="hamburger" onclick="showNav(this)">
+                    <!-- Each div here is just a horizontal line. This also gets CSS animated when active/clicked. -->
                     <div class="top-burger-bun"></div>
                     <div class="burger-filling"></div>
                     <div class="bottom-burger-bun"></div>
                 </div>
             </div>
         </section>
+        <section>
+        </section>
     </nav>
 
+    <!-- Container for the popout/popdown nav menu, which is only displayed on mobile devices, to conserve space. -->
     <div id="popout-nav-menu" class="active">
         <a href="index.html" class="nav-menu-link">Latest News</a>
         <a href="gaming-tech.html" class="nav-menu-link">Gaming Tech</a>
     </div>
 
+    <!-- This is the main content area where the page's actual content will go. -->
     <main id="main-content">
+        <!-- It's empty here as we're populating this container with content via javascript. -->
+        <!-- See js/latest-news.js-> getArticlesForPage() function for article fetching. -->
     </main>
 
+    <!-- Container for the footer, which is sticky, meaning if there is no space taken up in the main
+        content area, where the footer would normally move upwards, it insteads sticks to the bottom of the viewport,
+        it will, however, be pushed downwards and out of the viewport if there's enough content. -->
     <footer>
+        <!-- Container for the logo and move nav links. This one is displayed with a sparse layout for resolutions > mobile. -->
         <section class="hidden-mobile">
             <a href="contact-us.html">Contact Us</a>
             <image src="assets/images/large_gaming.ly.png" alt="Footer Logo"></image>
             <a href="about-us.html">About Us</a>
         </section>
 
+        <!-- This container will be used when viewing on mobile. It's optimised for space usage and stacks the links ontop of eachother. -->
         <section class="flex-3 hidden-tablet hidden-desktop">
             <image src="assets/images/small_gaming.ly.png" alt="Footer Logo"></image>
             <div class="flex-column">
-                <a class"footer-nav-link" href="contact-us.html">Contact Us</a>
-                <a class"footer-nav-link" href="about-us.html">About Us</a>
+                <a class="footer-nav-link" href="contact-us.html">Contact Us</a>
+                <a class="footer-nav-link" href="about-us.html">About Us</a>
             </div>
         </section>
 
+        <!-- Container for the copyright text. -->
         <section class="flex-1">
             <span>Copyright &copy;</span>
         </section>
     </footer>
 
+    <!-- Relevant scripts to make this page work. -->
     <script src="js/main.js"></script>
     <script src="js/article-data.js"></script>
     <script src="js/article.js"></script>
